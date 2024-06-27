@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.pth filter=lfs diff=lfs merge=lfs -text
+App/weights_orange_EFB7.pth filter=lfs diff=lfs merge=lfs -text
