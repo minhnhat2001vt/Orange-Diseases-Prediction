@@ -211,30 +211,35 @@ def display_disease_frequency_chart(disease_counts: dict):
     plt.title('Disease Frequency Detected by the Model')
     st.pyplot(plt)
 
+# Define the base path relative to the script file location
+base_path = os.path.dirname(__file__)
+# Define the path to the 'examples' directory
+examples_path = os.path.join(base_path, 'examples')
+# Define the path to the GIF
+gif_path = os.path.join(base_path, 'assets', 'orange_disease.gif')
+
 def main():
     """
     Main function to run the Streamlit app for orange disease detection.
     """
+
     st.title("Disease Detection for Orange")
     
     # Display the GIF
-    # Relative path to the GIF within the project directory
-    gif_url = "assets/orange_disease.gif"
     st.markdown(
-        f'<img src="{gif_url}" width="600" alt="Orange Disease Detection"/>',
+        f'<img src="{gif_path}" width="600" alt="Orange Disease Detection"/>',
         unsafe_allow_html=True
     )
     
     st.write("Upload your image of orange or choose one of the example images below:")
-
-    # Set the base path to the directory where the script is located
-    base_path = os.path.dirname(__file__)
     
-    # Construct the path to the 'examples' directory
-    examples_path = os.path.join(base_path, 'examples')
-    
-    example_images = os.listdir(examples_path)
-    example_images = [os.path.join("examples", img) for img in example_images]
+    # List images in the 'examples' directory
+    try:
+        example_images = os.listdir(examples_path)
+        example_images = [os.path.join(examples_path, img) for img in example_images]
+    except FileNotFoundError:
+        example_images = []
+        st.error("Failed to load example images.")
     selected_example = st.selectbox("Choose an example image:", ['None'] + example_images)
     if selected_example != 'None':
         image = Image.open(selected_example)
