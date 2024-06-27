@@ -256,7 +256,7 @@ base_path = os.path.dirname(__file__)
 # Define the path to the 'examples' directory
 examples_path = os.path.join(base_path, 'examples')
 # Define the path to the GIF
-gif_path = "https://github.com/minhnhat2001vt/Orange-Diseases-Prediction/blob/main/App/assets/orange_disease.gif"
+gif_path = "https://github.com/minhnhat2001vt/Orange-Diseases-Prediction/blob/main/App/assets/orange_disease.gif?raw=true"
 
 def main():
     """
