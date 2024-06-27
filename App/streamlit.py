@@ -227,7 +227,13 @@ def main():
     
     st.write("Upload your image of orange or choose one of the example images below:")
 
-    example_images = os.listdir("examples")
+    # Set the base path to the directory where the script is located
+    base_path = os.path.dirname(__file__)
+    
+    # Construct the path to the 'examples' directory
+    examples_path = os.path.join(base_path, 'examples')
+    
+    example_images = os.listdir(examples_path)
     example_images = [os.path.join("examples", img) for img in example_images]
     selected_example = st.selectbox("Choose an example image:", ['None'] + example_images)
     if selected_example != 'None':
