@@ -169,7 +169,7 @@ def classify_image(image: Image.Image):
     model.to(device)
     result = inference(model, image, device)
     rec_path = "recommendations.csv"
-    recommendations = os.path.join(base_path, rec_path)
+    recommendations = load_recommendations(os.path.join(base_path, rec_path))
 
     if result['result'] == 'unknown':
         st.write("### The class is of unknown origin")
