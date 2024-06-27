@@ -271,7 +271,7 @@ def main():
         unsafe_allow_html=True
     )
     
-    st.write("Upload your image of orange or choose one of the example images below:")
+    st.write("## Upload your image of orange or choose one of the example images below:")
     
     # List images in the 'examples' directory
     try:
