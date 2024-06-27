@@ -29,13 +29,53 @@ class_idx_to_name_dict = {
 
 # Stores general recommendations in case the model decides an image is out-of-distribution
 general_recommendations = """
-- Lorem Ipsum
+#### **Soil Preparation**
+- **Soil Type**: Choose well-draining, loamy soil. Amend clay soils with organic matter like compost or peat moss to improve drainage.
+- **pH Level**: Maintain soil pH between 6.0 and 7.5. Adjust pH using lime (to increase) or sulfur (to decrease) as necessary.
+
+#### **Watering**
+- **Young Trees**: Water once or twice a week to help establish roots, ensuring the soil is moist but not waterlogged.
+- **Mature Trees**: Reduce watering frequency but ensure trees are well-watered during dry periods. Opt for deep, infrequent watering sessions to foster deep root development.
+
+#### **Fertilization**
+- **Fertilizer Type**: Use nitrogen-rich or balanced N-P-K fertilizers specifically formulated for citrus or fruit trees.
+- **Application Schedule**: Fertilize young trees several times a year and mature trees in early spring and again in mid-summer to support fruiting.
+
+#### **Mulching**
+- **Application**: Apply organic mulch such as wood chips or bark around the base of the tree to retain moisture, suppress weeds, and add nutrients.
+- **Precautions**: Keep mulch a few inches away from the trunk to prevent rot and deter pests.
+
+#### **Pest and Disease Monitoring**
+- **Regular Checks**: Inspect trees regularly for signs of pests or diseases, noting any discoloration or abnormal growth.
+- **Management Strategies**: Employ horticultural oils or insecticidal soaps to manage pests. Promptly remove and destroy any diseased plant parts.
+
+#### **Support and Spacing**
+- **Tree Support**: Stake young trees if necessary to ensure stability against winds.
+- **Proper Spacing**: Space orange trees 12 to 25 feet apart, depending on variety, to ensure sufficient light and air circulation.
+
+#### **Harvesting**
+- **Optimal Timing**: Harvest oranges when they are fully mature, typically in winter or early spring. Note that oranges do not continue to ripen after being picked.
+- **Harvesting Technique**: Use garden shears or a sharp knife to cut the fruit from the tree, leaving a bit of stem to extend shelf life.
+
+#### **Additional Tips**
+- Monitor soil moisture and drainage, especially following heavy rainfall.
+- Consult with local agricultural extensions or professional horticulturists for advice specific to your region's climate and soil conditions.
 """
 
 # Random orange facts
 orange_facts = [
-    "Lorem Ipsum"
+    "Oranges are the most cultivated fruit in the world, primarily grown for juice production.",
+    "The orange is a hybrid between a pomelo and a mandarin, and it was first cultivated in ancient China.",
+    "Oranges are rich in vitamin C, which is vital for repairing body tissues and maintaining a healthy immune system.",
+    "Brazil is the largest producer of oranges in the world, followed by the United States, primarily in Florida and California.",
+    "There are over 600 varieties of oranges worldwide, including navel oranges, Valencia oranges, and blood oranges.",
+    "Oranges were once a rare and expensive commodity, considered a luxury item only available to the wealthy.",
+    "The orange tree is an evergreen, flowering tree, with an average height of about 9 to 10 meters.",
+    "Oranges are not only consumed as fresh fruit but are widely used in cooking and baking, and their zest (the outer skin) adds flavor to many recipes.",
+    "The name 'orange' does not refer to the color but originally to the fragrance of the fruit (from the Sanskrit 'naranga').",
+    "Oranges can be stored at room temperature or in the refrigerator and generally have a shelf life of up to two weeks."
 ]
+
 
 def get_model(num_classes):
     # Load the pre-trained EfficientNet B7 without the classifier
