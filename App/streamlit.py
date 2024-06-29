@@ -203,7 +203,7 @@ def classify_image(image: Image.Image):
     Args:
         image (Image.Image): The input image for classification.
     """
-    model_path = os.path.join(base_path, 'weights_efB7_aug_2.pth')
+    model_path = os.path.join(base_path, 'EFB7_Orange.pth')
     model = load_model(MODEL_PATH=model_path)
     device = torch.device("cuda" if torch.cuda.is_available() else 'cpu')
     model.to(device)
