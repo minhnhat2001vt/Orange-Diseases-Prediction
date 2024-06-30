@@ -12,7 +12,7 @@ import torch.nn as nn
 import torchvision.models as models
 
 # The energy threshold calculated on all images from the training dataset
-ENERGY_THRESHOLD = -2.038491129875183
+ENERGY_THRESHOLD = -4.388768291473388
 
 # Mapping of prediction classes to their names
 class_idx_to_name_dict = {
